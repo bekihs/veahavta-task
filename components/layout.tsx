@@ -1,5 +1,5 @@
 import Footer from '@/components/footer'
-import Header from '@/components/header'
+import Header from '@/components/header/header'
 import Main from '@/components/main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
@@ -7,15 +7,20 @@ import React from 'react'
 
 export default function Layout({ children, pageProps }: any) {
   const { dir, locale, router } = useLocale()
-  if (['/404', '/500'].includes(router.pathname)) {
+  if (['/404', '/500', '/401'].includes(router.pathname)) {
     return <>{children}</>
+  }
+  if (!pageProps.data) {
+    console.log(pageProps)
+
+    return <div>error</div>
   }
   return (
     <>
       <div className="app-wrapper" dir={dir}>
-        <Header data={pageProps.data.common} />
+        <Header data={pageProps.data?.common} />
         <Main>{children}</Main>
-        <Footer data={pageProps.data.common} />
+        <Footer data={pageProps.data?.common} />
       </div>
       <style jsx global>
         {`

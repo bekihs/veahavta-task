@@ -1,8 +1,9 @@
 export type HomePageType = {
-  data: {
+  data?: {
     homepage: Homepage
     common: Common
   }
+  error?: string
 }
 
 export type CommonType = {
@@ -29,6 +30,19 @@ export type Homepage = {
   contactUsText: string
 }
 
+export type LanguagesType = Array<{
+  he: string
+  en: string
+  ar: string
+  am: string
+  ti: string
+}>
+
+export type AppLinks = Array<{
+  text: string
+  relativeLink: string
+}>
+
 export type Common = {
   contactUsLinks: Array<{
     text: string
@@ -36,17 +50,8 @@ export type Common = {
     imagePath: string
     linkValue: string
   }>
-  appLinks: Array<{
-    text: string
-    relativeLink: string
-  }>
-  languageNames: Array<{
-    he: string
-    en: string
-    ar: string
-    am: string
-    ti: string
-  }>
+  appLinks: AppLinks
+  languageNames: LanguagesType
   contactUsFormFirstName: string
   contactUsFormLastName: string
   contactUsFormEmail: string
@@ -57,6 +62,13 @@ export type Common = {
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorMessageMissing: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {

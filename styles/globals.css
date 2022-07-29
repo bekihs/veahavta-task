@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+:root {
+    --main-color: #4e47f9;
+    --main-bg-color: #f4f3fd;
+} */
+
+body {
+  font-family: 'Assistant';
+}
