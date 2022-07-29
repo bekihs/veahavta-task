@@ -23,7 +23,10 @@ export default function Cards({ data }: HomePageType) {
         }
       `}</style>
       {data?.homepage.whatWeDoCards.map((i) => (
-        <Card key={i.title} className="flex items-stretch flex-col  w-full md:w-[338px] md:max-w-[23%]">
+        <Card
+          key={i.title}
+          className="flex items-stretch flex-col  w-full md:w-[338px] md:max-w-[23%]"
+        ><>
           <div className="card-image  ">
             <img
               src={i.imagePath}
@@ -34,7 +37,7 @@ export default function Cards({ data }: HomePageType) {
           <div className="card-content mx-[20px] my-[29px]">
             <div className="what-card-title">{i.title}</div>
             <div className="what-card-text">{i.text}</div>
-          </div>
+          </div></>
         </Card>
       ))}
     </div>

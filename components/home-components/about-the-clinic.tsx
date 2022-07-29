@@ -34,17 +34,17 @@ export default function AboutTheClinic({ data }: HomePageType) {
             .aboutus-image {
               padding-inline-end: 100px;
             }
-            .aboutus-image  span,
-              .aboutus-image  img{
-              position:unset !important;
-              width:100% !important;
-              height:100% !important;
+            .aboutus-image span,
+            .aboutus-image img {
+              position: unset !important;
+              width: 100% !important;
+              height: 100% !important;
             }
           }
         `}
       </style>
       <div className="aboutus-image ">
-        <Image layout='fill' src="/aboutUs.svg"></Image>
+        <Image layout="fill" src="/aboutUs.svg"></Image>
       </div>
       <div className="about-us-content">
         <div className="about-us-mini-title">{data?.homepage.aboutHeading}</div>

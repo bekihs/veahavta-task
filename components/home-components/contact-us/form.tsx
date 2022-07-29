@@ -1,7 +1,6 @@
 import { Card } from '@/components/data-components/card'
 import { HomeButton } from '@/components/data-components/home-button'
 import { HomePageType } from '@/lib/interface'
-import themePreval from '@/lib/theme.preval'
 import { Formik } from 'formik'
 import React from 'react'
 import * as Yup from 'yup'
@@ -28,7 +27,7 @@ export default function ContactUsForm({ data }: HomePageType) {
       .required(data?.common.contactUsFormErrorPhoneMissing),
   })
   return (
-    <Card className="   gap-2 pt-[5px]   md:mt-[-30%]">
+    <Card className="   gap-2 pt-[5px]   md:mt-[-30%]"><>
       <style jsx>{`
         .contactus-form .input input,
         .contactus-form .input textarea {
@@ -163,11 +162,11 @@ export default function ContactUsForm({ data }: HomePageType) {
             </div>
 
             <HomeButton className="mt-2em mb-[5em]">
-              {data?.common.contactUsFormSendButton}
+              {data?.common.contactUsFormSendButton||''}
             </HomeButton>
           </form>
         )}
-      </Formik>
+      </Formik></>
     </Card>
   )
 }

@@ -8,12 +8,11 @@ import OneZeroSkipToMainContent from '../onezero-skip-to-main-content'
 export default function Languages({
   languageNames,
 }: {
-  languageNames: LanguagesType
+  languageNames: Array<any>
 }) {
   const { dir } = useLocale()
   const { getLanguageImage } = useGetLnguageImageComponent()
   const languaes = Object.keys(languageNames[0] || {})
-  console.log(languaes)
   return (
     <ul className="flex flex-row gap-x-2">
       {languaes.map((lang) => (

@@ -16,11 +16,11 @@ export async function getStaticProps({ locale }: NextPageContext) {
     return {
       props: { data },
     }
-  } catch (ex) {
+  } catch (ex:any) {
     console.error(ex)
     return {
       redirect: {
-        destination: '/' + ex.response.status,
+        destination: '/' + ex?.response?.status,
       },
     }
   }
