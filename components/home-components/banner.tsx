@@ -9,10 +9,10 @@ export default function Banner({ data }: HomePageType) {
     <div id="top-header">
       <div className="wrapper">
         <div className="background"></div>
-        <PageHeader>{data?.homepage.title||''}</PageHeader>
+        <PageHeader>{data?.homepage.title || ''}</PageHeader>
         <div className="desc">{data?.homepage.description}</div>
         <HomeButton className="mt-2em mb-[5em]">
-          {data?.homepage.getToKnowUsButton||''}
+          {data?.homepage.getToKnowUsButton || ''}
         </HomeButton>
         <style jsx>{`
           .top-header .home-button {

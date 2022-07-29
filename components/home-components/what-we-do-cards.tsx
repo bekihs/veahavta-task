@@ -26,18 +26,20 @@ export default function Cards({ data }: HomePageType) {
         <Card
           key={i.title}
           className="flex items-stretch flex-col  w-full md:w-[338px] md:max-w-[23%]"
-        ><>
-          <div className="card-image  ">
-            <img
-              src={i.imagePath}
-              alt={i.title}
-              className="mx-auto my-[55px]"
-            />
-          </div>
-          <div className="card-content mx-[20px] my-[29px]">
-            <div className="what-card-title">{i.title}</div>
-            <div className="what-card-text">{i.text}</div>
-          </div></>
+        >
+          <>
+            <div className="card-image  ">
+              <img
+                src={i.imagePath}
+                alt={i.title}
+                className="mx-auto my-[55px]"
+              />
+            </div>
+            <div className="card-content mx-[20px] my-[29px]">
+              <div className="what-card-title">{i.title}</div>
+              <div className="what-card-text">{i.text}</div>
+            </div>
+          </>
         </Card>
       ))}
     </div>

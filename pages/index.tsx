@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }: NextPageContext) {
     return {
       props: { data },
     }
-  } catch (ex:any) {
+  } catch (ex: any) {
     console.error(ex)
     return {
       redirect: {
